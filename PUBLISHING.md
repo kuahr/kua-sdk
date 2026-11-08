@@ -32,5 +32,5 @@ Do not dispatch an already published version or rewrite release tags.
 
 Verify registry integrity against the inspected archive, a clean registry
 installation, ESM/CommonJS exports and TypeScript declarations. Python uses
-`kuahr` with `import kua`. Both registries have verified 0.3.1 releases. Version 0.3.2 adds product links/contact branding and validates the npm OIDC connection with a real release.
+`kuahr` with `import kua`. Both registries have verified 0.3.2 releases. Clean registry installs, Node ESM/CommonJS/TypeScript consumers, Python imports and archive integrity passed. Release 0.3.2 adds product links/contact branding and verified both trusted publishers with real OIDC releases; npm reports the connection as Valid.
 Manual npm publishing requires 2FA without bypass tokens.
