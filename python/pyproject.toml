@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kuahr"
+version = "0.3.0"
+description = "Official Python client for Kua company people, payroll drafts, events and webhooks."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Kua" }]
+keywords = ["kua", "payroll", "payments", "wallet", "api", "nigeria", "africa"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+]
+dependencies = ["httpx>=0.24"]
+
+[project.urls]
+Homepage = "https://docs.kuahr.com"
+Repository = "https://github.com/kuahr/kua-sdk/tree/main/python"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kua"]
