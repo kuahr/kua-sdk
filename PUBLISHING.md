@@ -34,3 +34,8 @@ Verify registry integrity against the inspected archive, a clean registry
 installation, ESM/CommonJS exports and TypeScript declarations. Python uses
 `kuahr` with `import kua`. Both registries have verified 0.3.2 releases. Clean registry installs, Node ESM/CommonJS/TypeScript consumers, Python imports and archive integrity passed. Release 0.3.2 adds product links/contact branding and verified both trusted publishers with real OIDC releases; npm reports the connection as Valid.
 Manual npm publishing requires 2FA without bypass tokens.
+
+
+Version 0.3.3 is prepared to correct the public setup guides to one API host,
+https://api.kuahr.com, for Test and Live keys. Client runtime behaviour is unchanged;
+publication and clean registry installation must be verified separately.

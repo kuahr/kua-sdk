@@ -14,10 +14,9 @@ Official Node.js/TypeScript and Python clients for the Kua company API.
 - [Python setup](python/README.md) — distribution `kuahr`, import `kua`
 - [Report a client issue](https://github.com/kuahr/kua-sdk/issues)
 
-## Start with sandbox
+## One API address, Test and Live keys
 
-Choose the sandbox host explicitly and use a sandbox-issued Test key with the
-task's least-privilege scopes. Begin with [your first read-only request](https://docs.kuahr.com/quickstart).
+Use **https://api.kuahr.com** with a Test key and the task's least-privilege scopes. Begin with [your first read-only request](https://docs.kuahr.com/quickstart).
 Test mode does not mirror every Live resource. Payroll approval/payment, salary
 setup and general wallet execution are outside this public client contract.
 
@@ -29,7 +28,8 @@ python -m pip install kuahr
 ```
 
 Python applications continue to use `import kua`. Both clients default to the
-production host; select sandbox explicitly during integration.
+same API address, **https://api.kuahr.com**. The verified Test or Live key determines
+the supported data partition and behaviour. Keep the URL unchanged when moving to Live.
 
 This repository contains public client code, synthetic tests and examples only.
 

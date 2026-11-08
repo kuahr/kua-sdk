@@ -1,7 +1,16 @@
 import assert from "node:assert/strict";
 import crypto from "node:crypto";
 import { test } from "node:test";
+import fs from "node:fs";
 import { Kua, KuaError, verifySignature } from "../dist/index.js";
+
+test("published setup guides use one API host for Test and Live keys", () => {
+  for (const relative of ["../../README.md", "../README.md", "../../python/README.md"]) {
+    const text = fs.readFileSync(new URL(relative, import.meta.url), "utf8");
+    assert.ok(text.includes("https://api.kuahr.com"), relative);
+    assert.ok(!/sandbox-api|sandbox-issued|select sandbox|sandbox host/i.test(text), relative);
+  }
+});
 
 test("verifySignature accepts a correctly signed payload", () => {
   const secret = "whsec_test";

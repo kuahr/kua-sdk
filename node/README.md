@@ -14,14 +14,13 @@ events and webhooks. [Documentation](https://docs.kuahr.com/sdks/node).
 npm install @kuahr/node
 ```
 
-Requires Node.js 18+. Store a sandbox-issued Test key with `payroll:read` in
+Requires Node.js 18+. Store a Test key with `payroll:read` in
 `KUA_API_KEY`, then make a read-only request:
 
 ```ts
 import { Kua } from "@kuahr/node";
 const kua = new Kua({
   apiKey: process.env.KUA_API_KEY!,
-  baseUrl: "https://sandbox-api.kuahr.com",
 });
 console.log(await kua.payrollRuns.list());
 ```
@@ -36,7 +35,8 @@ npm test
 ```
 
 Expected result: an array of this company's Test payroll runs, including `[]`.
-Choose the host explicitly: both clients otherwise default to production.
+Both Test and Live keys use **https://api.kuahr.com**. The verified key selects
+the supported data partition and behaviour; the API address stays the same.
 
 ## Supported boundaries
 

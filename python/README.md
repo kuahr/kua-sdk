@@ -20,12 +20,12 @@ python -m pip install kuahr
 ```
 
 Requires Python 3.9+. On Windows activate `.venv\Scripts\activate` instead.
-Store a sandbox-issued Test key with `payroll:read` in `KUA_API_KEY`:
+Store a Test key with `payroll:read` in `KUA_API_KEY`:
 
 ```python
 import os
 from kua import Kua
-with Kua(api_key=os.environ["KUA_API_KEY"], base_url="https://sandbox-api.kuahr.com") as kua:
+with Kua(api_key=os.environ["KUA_API_KEY"]) as kua:
     print(kua.payroll_runs.list())
 ```
 
@@ -37,7 +37,8 @@ python -m pytest -q
 ```
 
 Expected result: an array of this company's Test payroll runs, including `[]`.
-Choose the host explicitly: both clients otherwise default to production.
+Both Test and Live keys use **https://api.kuahr.com**. The verified key selects
+the supported data partition and behaviour; the API address stays the same.
 
 ## Supported boundaries
 
