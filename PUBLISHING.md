@@ -31,4 +31,4 @@ configure a package-specific GitHub trusted publisher before enabling an npm
 OIDC workflow. Verify a clean registry install and ESM, CommonJS and types.
 
 Registry publication remains pending until actual package metadata and clean
-registry installation have been verified. The source package version is 0.3.0.
+registry installation have been verified. The source package version is 0.3.1.

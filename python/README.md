@@ -8,17 +8,15 @@
 Official client for Kua company people, payroll drafts, workforce resources,
 events and webhooks. [Documentation](https://docs.kuahr.com/sdks/python).
 
-## Install from public source
+## Install
 
-Source version 0.3.0 is available here; registry publication is pending. The
-distribution name is `kuahr`, with `import kua`. The unrelated PyPI package
+The distribution is `kuahr`, with `import kua`. The unrelated PyPI package
 named `kua` is not this SDK.
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-git clone --branch main https://github.com/kuahr/kua-sdk.git
-python -m pip install ./kua-sdk/python
+python -m pip install kuahr
 ```
 
 Requires Python 3.9+. On Windows activate `.venv\Scripts\activate` instead.

@@ -8,18 +8,10 @@
 Official client for Kua company people, payroll drafts, workforce resources,
 events and webhooks. [Documentation](https://docs.kuahr.com/sdks/node).
 
-## Install from public source
-
-Source version 0.3.0 is available here; registry publication is pending. Do not
-assume `npm install @kuahr/node` retrieves this release.
+## Install
 
 ```bash
-git clone --branch main https://github.com/kuahr/kua-sdk.git
-cd kua-sdk/node
-npm ci
-npm run build
-# From your application directory:
-npm install /absolute/path/to/kua-sdk/node
+npm install @kuahr/node
 ```
 
 Requires Node.js 18+. Store a sandbox-issued Test key with `payroll:read` in

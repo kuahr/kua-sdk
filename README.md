@@ -10,7 +10,7 @@
 Official Node.js/TypeScript and Python clients for the Kua company API.
 
 - [Developer documentation](https://docs.kuahr.com)
-- [Node.js setup](node/README.md) — source package `@kuahr/node`
+- [Node.js setup](node/README.md) — npm package `@kuahr/node`
 - [Python setup](python/README.md) — distribution `kuahr`, import `kua`
 - [Report a client issue](https://github.com/kuahr/kua-sdk/issues)
 
@@ -21,12 +21,17 @@ task's least-privilege scopes. Begin with [your first read-only request](https:/
 Test mode does not mirror every Live resource. Payroll approval/payment, salary
 setup and general wallet execution are outside this public client contract.
 
-## Source availability
+## Install the SDKs
 
-Source version 0.3.0 is available here. Registry publication is pending; follow
-each client's source-install guide. This repository contains public client code,
-synthetic tests and examples only. No private product source or prior internal
-repository history is included.
+```bash
+npm install @kuahr/node
+python -m pip install kuahr
+```
+
+Python applications continue to use `import kua`. Both clients default to the
+production host; select sandbox explicitly during integration.
+
+This repository contains public client code, synthetic tests and examples only.
 
 ## Contributing
 
