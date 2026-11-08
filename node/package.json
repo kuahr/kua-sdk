@@ -1,6 +1,6 @@
 {
   "name": "@kuahr/node",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Official Node.js / TypeScript client for Kua company people, payroll drafts, events and webhooks.",
   "license": "MIT",
   "homepage": "https://docs.kuahr.com",
@@ -53,5 +53,10 @@
   },
   "overrides": {
     "esbuild": "0.28.1"
+  },
+  "author": {
+    "name": "Kua",
+    "email": "engineering@kuahr.com",
+    "url": "https://kuahr.com"
   }
 }

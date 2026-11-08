@@ -61,3 +61,11 @@ https://docs.kuahr.com. Never log credentials or signing secrets.
 ## Licence
 
 MIT. See LICENSE.
+
+## Kua links
+
+- [Kua Developers](https://docs.kuahr.com): integration guides, API reference and official SDKs.
+- [Kua](https://kuahr.com): bring your people, payroll and growth together.
+- [Kola](https://withkola.com): celebrate people with recognition, rewards and thoughtful giving.
+
+Developer support: engineering@kuahr.com.
