@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kuahr/.github/main/profile/dark.svg">
+  <img src="https://raw.githubusercontent.com/kuahr/.github/main/profile/light.svg" alt="Kua" width="150">
+</picture>
+
 # Kua Node.js / TypeScript SDK
 
 Official client for Kua company people, payroll drafts, workforce resources,

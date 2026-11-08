@@ -1,4 +1,11 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kuahr/.github/main/profile/dark.svg">
+  <img src="https://raw.githubusercontent.com/kuahr/.github/main/profile/light.svg" alt="Kua" width="150">
+</picture>
+
 # Kua SDKs
+
+[![SDK checks](https://github.com/kuahr/kua-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/kuahr/kua-sdk/actions/workflows/ci.yml)
 
 Official Node.js/TypeScript and Python clients for the Kua company API.
 
