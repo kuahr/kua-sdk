@@ -10,7 +10,7 @@
 Official Node.js/TypeScript and Python clients for the Kua company API.
 
 - [Developer documentation](https://docs.kuahr.com)
-- [Node.js setup](node/README.md) — source package `@kua/node`
+- [Node.js setup](node/README.md) — source package `@kuahr/node`
 - [Python setup](python/README.md) — distribution `kuahr`, import `kua`
 - [Report a client issue](https://github.com/kuahr/kua-sdk/issues)
 

@@ -1,5 +1,5 @@
 {
-  "name": "@kua/node",
+  "name": "@kuahr/node",
   "version": "0.3.0",
   "description": "Official Node.js / TypeScript client for Kua company people, payroll drafts, events and webhooks.",
   "license": "MIT",

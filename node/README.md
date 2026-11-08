@@ -11,7 +11,7 @@ events and webhooks. [Documentation](https://docs.kuahr.com/sdks/node).
 ## Install from public source
 
 Source version 0.3.0 is available here; registry publication is pending. Do not
-assume `npm install @kua/node` retrieves this release.
+assume `npm install @kuahr/node` retrieves this release.
 
 ```bash
 git clone --branch main https://github.com/kuahr/kua-sdk.git
@@ -26,7 +26,7 @@ Requires Node.js 18+. Store a sandbox-issued Test key with `payroll:read` in
 `KUA_API_KEY`, then make a read-only request:
 
 ```ts
-import { Kua } from "@kua/node";
+import { Kua } from "@kuahr/node";
 const kua = new Kua({
   apiKey: process.env.KUA_API_KEY!,
   baseUrl: "https://sandbox-api.kuahr.com",
