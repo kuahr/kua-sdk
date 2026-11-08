@@ -36,6 +36,9 @@ installation, ESM/CommonJS exports and TypeScript declarations. Python uses
 Manual npm publishing requires 2FA without bypass tokens.
 
 
-Version 0.3.3 is prepared to correct the public setup guides to one API host,
-https://api.kuahr.com, for Test and Live keys. Client runtime behaviour is unchanged;
-publication and clean registry installation must be verified separately.
+Version 0.3.3 is published to both registries. It corrects the public setup guides to
+one API host, https://api.kuahr.com, for Test and Live keys. Runtime implementation
+is unchanged. Both OIDC runs succeeded (Node 42448533546, Python 42448535184).
+Clean registry installs, Node ESM/CommonJS/types, Python imports, archive hashes
+and npm signature/provenance passed. The initial PyPI index propagation delay
+cleared before the successful standard name/version installation.
