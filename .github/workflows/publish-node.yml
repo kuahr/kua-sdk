@@ -1,0 +1,44 @@
+name: Publish Node SDK
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Exact version in node/package.json (must not exist on npm)
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: publish-node
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    defaults:
+      run:
+        working-directory: node
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - run: npm install --global npm@11.9.0
+      - name: Check release identity
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          node -e 'const p=require("./package.json"); if(p.name!=="@kuahr/node" || p.version!==process.env.RELEASE_VERSION) process.exit(1)'
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm test
+      - run: npm audit --audit-level=low
+      - run: npm pack --json > package-manifest.json
+      - name: Publish the inspected package with OIDC provenance
+        run: npm publish "$(node -p 'JSON.parse(require("fs").readFileSync("package-manifest.json","utf8"))[0].filename')" --access public --provenance

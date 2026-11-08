@@ -19,16 +19,17 @@ fresh `pip install kuahr==VERSION`, followed by `import kua`.
 
 ## Node
 
-Initial publication requires an authenticated npm owner of the package scope.
-GitHub organisation ownership does not grant npm scope ownership. Confirm the
-scope before changing the package name or any installation example.
+The published package is `@kuahr/node`; the owner is npm account `kuahr`.
+The initial 0.3.1 release used the owner's authenticated CLI and 2FA.
 
-Run `npm ci`, `npm run typecheck`, `npm run build`, `npm test`, `npm audit`, and
-`npm pack --dry-run` in `node/`. Inspect the archive before publishing it with
-`npm publish --access public`. Complete npm login/2FA in the owner's session;
-never put credentials in Git or release evidence. After first publication,
-configure a package-specific GitHub trusted publisher before enabling an npm
-OIDC workflow. Verify a clean registry install and ESM, CommonJS and types.
+Configure the npm package's GitHub trusted publisher with owner `kuahr`,
+repository `kua-sdk`, workflow `publish-node.yml`, environment `npm` and direct
+publishing permission. The GitHub environment is restricted to branch `main`.
+Dispatch **Publish Node SDK** with the exact package version for future releases.
+The workflow checks the name/version, builds, tests, audits and packs before
+publishing that archive with OIDC provenance. No npm token is stored on GitHub.
+Do not dispatch an already published version or rewrite release tags.
 
-Registry publication remains pending until actual package metadata and clean
-registry installation have been verified. The source package version is 0.3.1.
+Verify registry integrity against the inspected archive, a clean registry
+installation, ESM/CommonJS exports and TypeScript declarations. Python uses
+`kuahr` with `import kua`. Both registries currently have version 0.3.1.
